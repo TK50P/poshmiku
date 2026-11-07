@@ -1,7 +1,7 @@
 /**
 * @name Hatsune Miku (Nightcord UI)
 * @author Mai (@Specifix5), Siki, Ren (@riamuyumemi), Miya (@KageMiyaku)/Pudding (@Pudding77984612), TK50P (@Seoul4083, Modified)
-* @version 2.1.1-miku
+* @version 2.2-miku
 * @description A Hatsune Miku (#07FFF0 / #33CCBB / #6CD8C0) color edition of the Nightcord UI theme!
 * @website https://specifix.dev/
 */
@@ -558,17 +558,33 @@ div[class*="rolesList"] div[class^="role_"] span[class^="roleCircle_"][style*="r
   background-color: #233c3e !important;
 }
 
-div[class^="layerContainer"] > div[class^="layer"] div[class^="reactors"] {
-  background-color: var(--background-primary);
+/* Reactions Modal (Mana / Visual Refresh — Zero :has() selectors) */
+div[aria-label="Reactions"] [data-mana-component="modal"],
+div[aria-label="Reactions"] header[class*="header_"] {
+  background-color: var(--background-primary) !important;
 }
-div[class^="layerContainer"] > div[class^="layer"] div[class^="scroller"] {
-  background-color: var(--background-secondary);
+div[aria-label="Reactions"] [data-mana-component="modal"] {
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35) !important;
 }
-div[class^="layerContainer"] > div[class^="layer"] div[class*="reactorDefault"] {
-  box-shadow: inset 0 -1px 0 var(--background-modifier-accent);
+div[aria-label="Reactions"] div[class*="spacer_"] {
+  background-color: var(--background-primary) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
 }
-div[class^="layerContainer"] > div[class^="layer"] div[class*="reactionSelected"] {
-  background-color: var(--background-modifier-selected);
+div[aria-label="Reactions"] div[class^="reactors"],
+div[aria-label="Reactions"] div[class*="reactorsContainer_"] {
+  background-color: var(--background-primary) !important;
+}
+div[aria-label="Reactions"] div[class^="scroller"] {
+  background-color: transparent !important;
+  border-right: none !important;
+}
+div[aria-label="Reactions"] div[class*="reactorDefault"] {
+  box-shadow: inset 0 -1px 0 var(--border-subtle) !important;
+}
+div[aria-label="Reactions"] div[class*="reactionSelected"] {
+  background-color: var(--brand-30a) !important;
+  box-shadow: inset 0 0 0 1px var(--brand-500) !important;
 }
 
 section[class^="positioncontainer_"] [class*="stickerInspected_"] [class^="inspectedIndicator"],
