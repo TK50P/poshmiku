@@ -496,7 +496,14 @@ div[class^="homecontainer_"] > div[class^="homecontent_"] div[class*="card_"] {
   background-color: #3b2029 !important;
 }
 div[class^="chat"] > div[class^="content_"] main[class^="chatContent_"] + div[class^="container_"] {
-  background-color: var(--background-secondary);
+  background-color: var(--background-primary) !important;
+  border-left: none !important;
+}
+
+/* Remove dark top border/background seam on Friends container (container_zrUwGA) while keeping top bars */
+main[class*="container_"][aria-label="Friends"] {
+  background-color: transparent !important;
+  border-top: none !important;
 }
 
 div[class^="sidebar_"] > section[class^="panels_"] svg[class*="buttonIcon_"],
