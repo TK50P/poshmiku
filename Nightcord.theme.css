@@ -1,7 +1,7 @@
 /**
 * @name Nightcord
 * @author Mai (@Specifix5), Siki, Ren (@riamuyumemi), Miya (@KageMiyaku)/Pudding (@Pudding77984612), TK50P (@Seoul4083, Modified)
-* @version 2.1.0
+* @version 2.1.1
 * @description A theme made to look like the Nightcord UI from Project Sekai (プロセカ)!
 * @website https://specifix.dev/
 */
@@ -267,9 +267,7 @@ div[class*="shop"] > div[class*="mainContent"] {
 }
 
 div[class*="sidebarRegion_"],
-div[class*="sidebarRegionScroller_"],
-nav[class*="sidebar_"],
-div[class*="sidebar_"] {
+div[class*="sidebarRegionScroller_"] {
   background-color: #3d3659 !important;
 }
 
