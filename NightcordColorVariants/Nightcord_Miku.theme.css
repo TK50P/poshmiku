@@ -1,7 +1,7 @@
 /**
 * @name Hatsune Miku (Nightcord UI)
 * @author Mai (@Specifix5), Siki, Ren (@riamuyumemi), Miya (@KageMiyaku)/Pudding (@Pudding77984612), TK50P (@Seoul4083, Modified)
-* @version 2.2-miku
+* @version 2.3-miku
 * @description A Hatsune Miku (#07FFF0 / #33CCBB / #6CD8C0) color edition of the Nightcord UI theme!
 * @website https://specifix.dev/
 */
@@ -206,12 +206,12 @@
 
   --modal-background: #233c3e;
   --modal-footer-background: #142426;
-  --scrollbar-thin-thumb: #142426;
+  --scrollbar-thin-thumb: var(--brand-50a);
   --scrollbar-thin-track: transparent;
-  --scrollbar-auto-thumb: #142426;
-  --scrollbar-auto-track: rgba(61, 54, 89, 0.65);
-  --scrollbar-auto-scrollbar-color-thumb: #33CCBB;
-  --scrollbar-auto-scrollbar-color-track: rgba(61, 54, 89, 0.65);
+  --scrollbar-auto-thumb: var(--brand-60a);
+  --scrollbar-auto-track: var(--background-mod-subtle);
+  --scrollbar-auto-scrollbar-color-thumb: var(--brand-500);
+  --scrollbar-auto-scrollbar-color-track: var(--background-mod-subtle);
   --input-background: #142426;
   --input-border: #35585b;
   --input-placeholder-text: #e2f5f4;
