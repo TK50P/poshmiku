@@ -285,7 +285,7 @@ div[class*="actions"] > [class*="actionButton"] {
 
 /* === 4. Avatars & Guild Navigation === */
 [aria-owns="guild-list-unread-dms"] [class*="childWrapper"] {
-  content: url(https://github.com/Specifix5/poshmiku/blob/main/nightcord.png?raw=true);
+  content: url(https://raw.githubusercontent.com/TK50P/poshmiku/refs/heads/main/nightcord.png);
 }
 
 [aria-owns="guild-list-unread-dms"] [class*="childWrapper"] > svg {
@@ -294,15 +294,15 @@ div[class*="actions"] > [class*="actionButton"] {
 
 [class*="avatar"][src*="/assets/"],
 [class*="avatar"][style*="/assets/"] {
-  content: url(https://github.com/Specifix5/poshmiku/blob/main/nightcord-bw.png?raw=true);
+  content: url(https://raw.githubusercontent.com/TK50P/poshmiku/refs/heads/main/nightcord-bw.png);
 }
 
 div[class*="shop"] div[class*="avatarStack"] img[class*="avatar"][src*="/assets/"] {
-  content: url(https://github.com/Specifix5/poshmiku/blob/main/nightcord-hbw.png?raw=true);
+  content: url(https://raw.githubusercontent.com/TK50P/poshmiku/refs/heads/main/nightcord-hbw.png);
 }
 
 div[class*="shop"] div[class*="fullPreview"] img[class*="preview"][src*="/assets/"] {
-  content: url(https://github.com/Specifix5/poshmiku/blob/main/nightcord-profile-preview.png?raw=true);
+  content: url(https://raw.githubusercontent.com/TK50P/poshmiku/refs/heads/main/nightcord-profile-preview.png);
 }
 
 nav[class*="guilds_"] foreignObject > div[data-list-item-id^="guildsnav_"] {
