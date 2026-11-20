@@ -1,7 +1,7 @@
 /**
 * @name Hatsune Miku (Nightcord UI)
 * @author Mai (@Specifix5), Siki, Ren (@riamuyumemi), Miya (@KageMiyaku)/Pudding (@Pudding77984612), TK50P (@Seoul4083, Modified)
-* @version 2.3-miku
+* @version 2.4-miku
 * @description A Hatsune Miku (#07FFF0 / #33CCBB / #6CD8C0) color edition of the Nightcord UI theme!
 * @website https://specifix.dev/
 */
@@ -263,7 +263,13 @@ div[class*="nowPlayingColumn_"] div[class*="scroller_"],
 div[data-list-id="message-requests-list"],
 div[data-list-id="message-requests-spam-list"],
 div[class*="shop"] > div[class*="mainContent"] {
-  background-color: #1c3d3f !important;
+  background-color: #1a4541 !important;
+}
+
+div[class*="tabBar_"],
+main[class*="container_"][aria-label="Friends"] > div[class^="top_"],
+main[class*="container_"][aria-label="Friends"] header {
+  background-color: #19413d !important;
 }
 
 div[class*="sidebarRegion_"],
@@ -282,6 +288,22 @@ div[class*="guildInviteContainer"],
 div[class*="actions"] > [class*="actionButton"] {
   background-color: var(--background-secondary);
 }
+div[class*="guildInviteContainer"] {
+  --background-surface-high: var(--background-secondary);
+  --background-surface-higher: var(--background-primary);
+  --background-surface-highest: var(--background-primary);
+  --bg-overlay-floating: var(--background-secondary);
+  --background-floating: var(--background-secondary);
+  background-color: var(--background-secondary) !important;
+  border: 1px solid var(--border-subtle) !important;
+}
+div[class*="guildInviteContainer"] div[class*="floatingFooter_"],
+div[class*="guildInviteContainer"] div[class*="footer_"],
+div[class*="guildInviteContainer"] div[class*="floatingFooter_"]::before,
+div[class*="guildInviteContainer"] div[class*="footer_"]::before {
+  background: var(--background-secondary) !important;
+  background-image: none !important;
+}
 
 /* === 4. Avatars & Guild Navigation === */
 [aria-owns="guild-list-unread-dms"] [class*="childWrapper"] {
@@ -290,19 +312,6 @@ div[class*="actions"] > [class*="actionButton"] {
 
 [aria-owns="guild-list-unread-dms"] [class*="childWrapper"] > svg {
   display: none;
-}
-
-[class*="avatar"][src*="/assets/"],
-[class*="avatar"][style*="/assets/"] {
-  content: url(https://raw.githubusercontent.com/TK50P/poshmiku/refs/heads/main/nightcord-bw.png);
-}
-
-div[class*="shop"] div[class*="avatarStack"] img[class*="avatar"][src*="/assets/"] {
-  content: url(https://raw.githubusercontent.com/TK50P/poshmiku/refs/heads/main/nightcord-hbw.png);
-}
-
-div[class*="shop"] div[class*="fullPreview"] img[class*="preview"][src*="/assets/"] {
-  content: url(https://raw.githubusercontent.com/TK50P/poshmiku/refs/heads/main/nightcord-profile-preview.png);
 }
 
 nav[class*="guilds_"] foreignObject > div[data-list-item-id^="guildsnav_"] {
@@ -520,20 +529,6 @@ div[class^="sidebar_"] > section[class^="panels_"] div[class*="buttonContents"] 
   color: #ffffff;
 }
 
-/* === 7. Popouts, Modals, Context Menus & Profile Cards === */
-div[class^="layerContainer"] div[id^="popout_"] > div[class*="didRender_"] > div {
-  background-color: var(--background-floating);
-  border-radius: 13px;
-  overflow: hidden;
-}
-
-/* User profile popouts use 7px corners and a transparent outer wrapper */
-div[class^="layerContainer"] div[id^="popout_"] > div[class*="didRender_"] > div:has([class*="userPopout"], [class*="userProfileOuter"], [class*="profileEffects"], .custom-theme-background) {
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border-radius: 7px;
-}
-
 /* Menus & status/account submenus use a transparent outer wrapper */
 div[class^="layerContainer"] div[id^="popout_"] > div[class*="didRender_"] > div:has([class*="menu_"], [role="menu"]) {
   background-color: transparent !important;
@@ -644,10 +639,18 @@ div[class^="layerContainer"] div[class^="queryContainer"] span[class^="key"] {
   color: #ffffff;
   background-color: #233c3e;
 }
-div[class^="layerContainer"] [class*="tooltipBrand_"],
+div[class^="layerContainer"] [class*="tooltipBrand_"] {
+  color: #142426;
+}
+div[class*="popout_"][class*="popover_"] div[class*="row_"][role="button"]:hover,
+div[class^="layerContainer"] div[class^="popout_"] div[class^="row"][role="button"]:hover {
+  background-color: var(--background-modifier-hover) !important;
+}
+div[class*="popout_"][class*="popover_"] div[class*="row_"][role="button"]:hover,
+div[class*="popout_"][class*="popover_"] div[class*="row_"][role="button"]:hover *,
 div[class^="layerContainer"] div[class^="popout_"] div[class^="row"][role="button"]:hover,
 div[class^="layerContainer"] div[class^="popout_"] div[class^="row"][role="button"]:hover [class*="timestamp"] {
-  color: #142426;
+  color: #ffffff !important;
 }
 
 form[class*="card_"] {

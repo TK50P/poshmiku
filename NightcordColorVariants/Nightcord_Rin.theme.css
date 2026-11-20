@@ -282,6 +282,22 @@ div[class*="guildInviteContainer"],
 div[class*="actions"] > [class*="actionButton"] {
   background-color: var(--background-secondary);
 }
+div[class*="guildInviteContainer"] {
+  --background-surface-high: var(--background-secondary);
+  --background-surface-higher: var(--background-primary);
+  --background-surface-highest: var(--background-primary);
+  --bg-overlay-floating: var(--background-secondary);
+  --background-floating: var(--background-secondary);
+  background-color: var(--background-secondary) !important;
+  border: 1px solid var(--border-subtle) !important;
+}
+div[class*="guildInviteContainer"] div[class*="floatingFooter_"],
+div[class*="guildInviteContainer"] div[class*="footer_"],
+div[class*="guildInviteContainer"] div[class*="floatingFooter_"]::before,
+div[class*="guildInviteContainer"] div[class*="footer_"]::before {
+  background: var(--background-secondary) !important;
+  background-image: none !important;
+}
 
 /* === 4. Avatars & Guild Navigation === */
 [aria-owns="guild-list-unread-dms"] [class*="childWrapper"] {
@@ -292,18 +308,6 @@ div[class*="actions"] > [class*="actionButton"] {
   display: none;
 }
 
-[class*="avatar"][src*="/assets/"],
-[class*="avatar"][style*="/assets/"] {
-  content: url(https://raw.githubusercontent.com/TK50P/poshmiku/refs/heads/main/nightcord-bw.png);
-}
-
-div[class*="shop"] div[class*="avatarStack"] img[class*="avatar"][src*="/assets/"] {
-  content: url(https://raw.githubusercontent.com/TK50P/poshmiku/refs/heads/main/nightcord-hbw.png);
-}
-
-div[class*="shop"] div[class*="fullPreview"] img[class*="preview"][src*="/assets/"] {
-  content: url(https://raw.githubusercontent.com/TK50P/poshmiku/refs/heads/main/nightcord-profile-preview.png);
-}
 
 nav[class*="guilds_"] foreignObject > div[data-list-item-id^="guildsnav_"] {
   background-color: #342d1e;
@@ -521,19 +525,6 @@ div[class^="sidebar_"] > section[class^="panels_"] div[class*="buttonContents"] 
 }
 
 /* === 7. Popouts, Modals, Context Menus & Profile Cards === */
-div[class^="layerContainer"] div[id^="popout_"] > div[class*="didRender_"] > div {
-  background-color: var(--background-floating);
-  border-radius: 13px;
-  overflow: hidden;
-}
-
-/* User profile popouts use 7px corners and a transparent outer wrapper */
-div[class^="layerContainer"] div[id^="popout_"] > div[class*="didRender_"] > div:has([class*="userPopout"], [class*="userProfileOuter"], [class*="profileEffects"], .custom-theme-background) {
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border-radius: 7px;
-}
-
 /* Menus & status/account submenus use a transparent outer wrapper */
 div[class^="layerContainer"] div[id^="popout_"] > div[class*="didRender_"] > div:has([class*="menu_"], [role="menu"]) {
   background-color: transparent !important;
